@@ -1,0 +1,16 @@
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.links a {
+  margin: 0 0.8rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #1da1f2; /* or any highlight color you like */
+}
