@@ -57,7 +57,9 @@ Compared to traditional robotics frameworks, Isaac provides:
 
 ## Architecture Diagram
 
-```mermaid
+![Flow Diagram](/img/ch12-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Isaac Platform"
         A[Isaac Sim]
@@ -88,28 +90,28 @@ graph TB
         Q[Manipulation]
     end
 
-    A --> F
-    A --> H
-    B --> F
-    B --> G
-    C --> F
-    D --> F
-    E --> F
-    F --> L
-    G --> L
-    H --> L
-    I --> L
-    L --> K
-    M --> K
-    K --> N
-    K --> O
-    K --> P
-    K --> Q
-    N --> J
-    O --> J
-    P --> J
-    Q --> J
-```
+    A -/-> F
+    A -/-> H
+    B -/-> F
+    B -/-> G
+    C -/-> F
+    D -/-> F
+    E -/-> F
+    F -/-> L
+    G -/-> L
+    H -/-> L
+    I -/-> L
+    L -/-> K
+    M -/-> K
+    K -/-> N
+    K -/-> O
+    K -/-> P
+    K -/-> Q
+    N -/-> J
+    O -/-> J
+    P -/-> J
+    Q -/-> J
+``` -->
 
 ## Flow Diagram
 

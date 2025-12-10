@@ -60,7 +60,9 @@ Realistic sensor simulation includes:
 
 ## Architecture Diagram
 
-```mermaid
+![Architecture Diagram](/img/ch9-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Physics Simulation"
         A[Physics Engine]
@@ -90,36 +92,38 @@ graph TB
         P[Parameter Server]
     end
 
-    A --> B
-    A --> C
-    A --> D
-    B --> E
-    B --> F
-    B --> G
-    B --> H
-    B --> I
-    J --> E
-    K --> F
-    L --> G
-    M --> H
-    J --> I
-    E --> N
-    F --> N
-    G --> N
-    H --> N
-    I --> N
-    N --> O
-    P --> A
-    P --> E
-    P --> F
-    P --> G
-    P --> H
-    P --> I
-```
+    A -/-> B
+    A -/-> C
+    A -/-> D
+    B -/-> E
+    B -/-> F
+    B -/-> G
+    B -/-> H
+    B -/-> I
+    J -/-> E
+    K -/-> F
+    L -/-> G
+    M -/-> H
+    J -/-> I
+    E -/-> N
+    F -/-> N
+    G -/-> N
+    H -/-> N
+    I -/-> N
+    N -/-> O
+    P -/-> A
+    P -/-> E
+    P -/-> F
+    P -/-> G
+    P -/-> H
+    P -/-> I
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Architecture Diagram](/img/ch9-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant Phys as Physics Engine
     participant Sensor as Sensor Simulation
@@ -134,7 +138,7 @@ sequenceDiagram
     App->>ROS: Send control commands
     ROS->>Phys: Apply forces/torques
     Phys->>Phys: Update physics state
-```
+``` -->
 
 ## Code Example: Sensor Configuration in URDF
 

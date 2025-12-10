@@ -49,7 +49,9 @@ While simulation provides many advantages, it's important to understand the real
 
 ## Architecture Diagram
 
-```mermaid
+![Architecture Diagram](/img/ch7-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Gazebo Simulation Environment"
         A[Physics Engine]
@@ -71,26 +73,28 @@ graph TB
         K[Control Algorithms]
     end
 
-    A --> C
-    B --> C
-    D --> A
-    D --> B
-    E --> A
-    E --> B
-    E --> C
-    F --> A
-    F --> B
-    F --> C
-    G --> F
-    H --> F
-    I --> G
-    J --> G
-    K --> G
-```
+    A -.-> C
+    B -.-> C
+    D -.-> A
+    D -.-> B
+    E -.-> A
+    E -.-> B
+    E -.-> C
+    F -.-> A
+    F -.-> B
+    F -.-> C
+    G -.-> F
+    H -.-> F
+    I -.-> G
+    J -.-> G
+    K -.-> G
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Architecture Diagram](/img/ch7-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant Dev as Developer
     participant Gazebo as Gazebo Simulator
@@ -103,7 +107,7 @@ sequenceDiagram
     Robot->>ROS2: Send control commands
     ROS2->>Gazebo: Apply actuator commands
     Gazebo->>Dev: Visualize simulation
-```
+``` -->
 
 ## Code Example: Simple Gazebo Model (URDF)
 

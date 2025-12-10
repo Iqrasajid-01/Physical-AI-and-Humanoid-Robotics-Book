@@ -59,7 +59,9 @@ When deploying perception systems on edge platforms:
 
 ## Architecture Diagram
 
-```mermaid
+![Flow Diagram](/img/ch13-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Input Sensors"
         A[RGB Camera]
@@ -90,32 +92,34 @@ graph TB
         Q[Deep Learning Accelerator]
     end
 
-    A --> E
-    B --> E
-    C --> I
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-    H --> J
-    H --> K
-    H --> L
-    H --> M
-    G --> O
-    O --> P
-    O --> Q
-    N --> O
-    N --> P
-    N --> Q
-    J --> I
-    K --> I
-    L --> I
-    M --> I
-```
+    A -/-> E
+    B -/-> E
+    C -/-> I
+    D -/-> E
+    E -/-> F
+    F -/-> G
+    G -/-> H
+    H -/-> J
+    H -/-> K
+    H -/-> L
+    H -/-> M
+    G -/-> O
+    O -/-> P
+    O -/-> Q
+    N -/-> O
+    N -/-> P
+    N -/-> Q
+    J -/-> I
+    K -/-> I
+    L -/-> I
+    M -/-> I
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch13-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant Sensor as Camera Sensor
     participant Preproc as Image Preprocessing
@@ -128,7 +132,7 @@ sequenceDiagram
     DL->>Post: Raw model output
     Post->>Output: Processed perception results
     Output->>Robot: Actionable perception data
-```
+``` -->
 
 ## Code Example: Isaac Perception Pipeline
 

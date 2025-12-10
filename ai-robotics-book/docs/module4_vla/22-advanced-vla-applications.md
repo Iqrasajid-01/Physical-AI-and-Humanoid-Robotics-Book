@@ -54,7 +54,9 @@ Advanced VLA systems incorporate:
 
 ## Architecture Diagram
 
-```mermaid
+![Flow Diagram](/img/ch22-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Perception Layer"
         A[Visual Perception]
@@ -98,34 +100,36 @@ graph TB
         X[Long-term Autonomy]
     end
 
-    A --> D
-    B --> D
-    C --> D
-    D --> M
-    E --> F
-    F --> G
-    G --> H
-    H --> M
-    I --> L
-    J --> L
-    K --> L
-    L --> M
-    M --> P
-    N --> P
-    O --> P
-    P --> Q
-    Q --> R
-    R --> S
-    S --> T
-    T --> U
-    T --> V
-    T --> W
-    T --> X
-```
+    A -/-> D
+    B -/-> D
+    C -/-> D
+    D -/-> M
+    E -/-> F
+    F -/-> G
+    G -/-> H
+    H -/-> M
+    I -/-> L
+    J -/-> L
+    K -/-> L
+    L -//-> M
+    M -/-> P
+    N -/-> P
+    O -/-> P
+    P -/-> Q
+    Q -/-> R
+    R -/-> S
+    S -//-> T
+    T -/-> U
+    T -/-> V
+    T -/-> W
+    T -/-> X
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch22-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant Human as Human User
     participant VLA as Advanced VLA System
@@ -152,7 +156,7 @@ sequenceDiagram
     Robot->>Env: Complete task
     Env->>VLA: Task outcome
     VLA->>Learn: Long-term learning
-```
+``` -->
 
 ## Code Example: Advanced VLA Application Framework
 

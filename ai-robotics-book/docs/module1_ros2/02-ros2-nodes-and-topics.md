@@ -49,14 +49,14 @@ Messages are the data structures that flow between nodes. They are defined using
 - Other message types (nested messages)
 
 ## Architecture Diagram
-
-<div style={{ textAlign: "center" }}>
+![Flow Diagram](/img/architecture-diagram.png)
+<!-- <div style={{ textAlign: "center" }}>
   <img
     src="/img/architecture-diagram.png"
     alt="Architecture Diagram"
-    style={{ maxWidth: "400px", width: "40%" }}
+    style={{ maxWidth: "400px", width: "80%" }}
   />
-</div>
+</div> -->
 
 <!-- ```mermaid
 graph TB
@@ -82,13 +82,15 @@ graph TB
 
 ## Flow Diagram
 
-<div style={{ textAlign: "center" }}>
+![Flow Diagram](/img/ch2-flow.svg)
+
+<!-- <div style={{ textAlign: "center" }}>
   <img
     src="/img/ch2-flow.svg"
     alt="Flow Diagram"
     style={{ maxWidth: "600px", width: "80%" }}
   />
-</div>
+</div> -->
 
 <!-- ```mermaid
 sequenceDiagram

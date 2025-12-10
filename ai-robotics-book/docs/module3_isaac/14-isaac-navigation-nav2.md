@@ -58,7 +58,9 @@ Navigation on Jetson platforms requires special considerations:
 
 ## Architecture Diagram
 
-```mermaid
+![Flow Diagram](/img/ch14-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Navigation Inputs"
         A[Sensor Data]
@@ -90,30 +92,32 @@ graph TB
         R[Map Updates]
     end
 
-    A --> E
-    B --> F
-    C --> G
-    D --> I
-    E --> F
-    F --> G
-    F --> H
-    G --> H
-    H --> I
-    I --> O
-    G --> P
-    H --> P
-    I --> Q
-    E --> R
-    K --> G
-    L --> F
-    M --> R
-    N --> E
-    J --> I
-```
+    A -/-> E
+    B -/-> F
+    C -/-> G
+    D -/-> I
+    E -/-> F
+    F -/-> G
+    F -/-> H
+    G -/-> H
+    H -/-> I
+    I -/-> O
+    G -/-> P
+    H -/-> P
+    I -/-> Q
+    E -/-> R
+    K -/-> G
+    L -/-> F
+    M -/-> R
+    N -/-> E
+    J -/-> I
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch14-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant Robot as Robot
     participant Localize as Localization
@@ -128,7 +132,7 @@ sequenceDiagram
     Avoid->>Control: Velocity commands
     Control->>Robot: Motor commands
     Robot->>Localize: Odometry data
-```
+``` -->
 
 ## Code Example: Isaac-Enhanced Navigation Node
 

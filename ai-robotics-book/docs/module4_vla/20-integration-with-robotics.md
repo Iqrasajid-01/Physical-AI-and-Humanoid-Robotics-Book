@@ -54,7 +54,9 @@ The integration typically involves several layers:
 
 ## Architecture Diagram
 
-```mermaid
+![Flow Diagram](/img/ch18-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "VLA System"
         A[Vision Processing]
@@ -91,33 +93,35 @@ graph TB
         T[Error Handling]
     end
 
-    A --> D
-    B --> D
-    C --> D
-    D --> R
-    E --> R
-    F --> R
-    G --> Q
-    Q --> D
-    R --> H
-    H --> K
-    H --> L
-    I --> G
-    J --> G
-    M --> A
-    M --> B
-    M --> C
-    N --> M
-    O --> N
-    P --> O
-    T --> D
-    T --> R
-    S --> D
-```
+    A -/-> D
+    B -/-> D
+    C -/-> D
+    D -/-> R
+    E -/-/> R
+    F -/-> R
+    G -/-> Q
+    Q -//-> D
+    R -/-> H
+    H -/-> K
+    H -/-> L
+    I -/-> G
+    J -/-> G
+    M -/-> A
+    M -/-> B
+    M -/-> C
+    N -/-> M
+    O -/-> N
+    P -/-> O
+    T -/-> D
+    T -/-> R
+    S -/-> D
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch20-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant User as Human User
     participant VLA as VLA System
@@ -136,7 +140,7 @@ sequenceDiagram
     Robot->>Snsr: Sense environment
     Snsr->>VLA: Feedback data
     VLA->>User: Task status
-```
+``` -->
 
 ## Code Example: VLA-Robot Integration
 

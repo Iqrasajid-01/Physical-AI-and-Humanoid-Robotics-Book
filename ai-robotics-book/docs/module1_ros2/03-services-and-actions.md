@@ -72,6 +72,10 @@ graph TB
 
 ## Flow Diagram
 
+![Architecture Diagram](/img/ch3-flow.svg)
+
+![Architecture Diagram](/img/ch3-flow2.svg)
+<!-- 
 <div
   style={{
     textAlign: "center",
@@ -100,7 +104,7 @@ graph TB
     alt="Flow Diagram 2"
     style={{ maxWidth: "400px", width: "80%" }}
   />
-</div>
+</div> -->
 
 
 <!-- ```mermaid

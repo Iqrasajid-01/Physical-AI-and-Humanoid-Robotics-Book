@@ -69,13 +69,7 @@ my_robot_package/
 
 ## Architecture Diagram
 
-<div style={{ textAlign: "center" }}>
-  <img
-    src="/img/ch4-ad.svg"
-    alt="Architecture Diagram"
-    style={{ maxWidth: "900px", width: "100%" }}
-  />
-</div>
+![Architecture Diagram](/img/ch4-ad.svg)
 
 <!-- ```mermaid
 graph TB
@@ -102,13 +96,7 @@ graph TB
 
 ## Flow Diagram
 
-<div style={{ textAlign: "center" }}>
-  <img
-    src="/img/ch4-flow.svg"
-    alt="Flow Diagram"
-    style={{ maxWidth: "900px", width: "100%" }}
-  />
-</div>
+![Architecture Diagram](/img/ch4-flow.svg)
 
 <!-- ```mermaid
 sequenceDiagram

@@ -56,7 +56,9 @@ The typical pipeline includes:
 
 ## Architecture Diagram
 
-```mermaid
+![Flow Diagram](/img/ch21-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Audio Input"
         A[Microphone Array]
@@ -89,28 +91,30 @@ graph TB
         P[Status Indication]
     end
 
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-    H --> I
-    I --> J
-    J --> K
-    J --> L
-    J --> M
-    K --> N
-    L --> N
-    M --> N
-    N --> P
-    O --> P
-```
+    A -/-> B
+    B -/-> C
+    C -/-> D
+    D -/-> E
+    E -/-> F
+    F -/-> G
+    G -/-> H
+    H -/-> I
+    I /-/-> J
+    J -/-> K
+    J -/-> L
+    J -/-> M
+    K /-/-> N
+    L -/-/> N
+    M -/-> N
+    N -/-> P
+    O -/-> P
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch21-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant User as Human User
     participant Mic as Microphone
@@ -129,7 +133,7 @@ sequenceDiagram
     User->>User: Wait for completion
     Robot->>Feedback: Completion status
     Feedback->>User: Task completed confirmation
-```
+``` -->
 
 ## Code Example: Whisper Integration for Voice Commands
 

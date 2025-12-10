@@ -25,45 +25,47 @@ Implementing robust error handling and recovery mechanisms for the integrated sy
 
 ## Architecture/Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch26-ad.svg)
+
+<!-- ```mermaid
 graph TD
-    A[Capstone Implementation] --> B[Phase 1: Core Setup]
-    A --> C[Phase 2: ROS2 Integration]
-    A --> D[Phase 3: Isaac Integration]
-    A --> E[Phase 4: VLA Integration]
-    A --> F[Phase 5: System Testing]
-    A --> G[Phase 6: Optimization]
+    A[Capstone Implementation] -/-> B[Phase 1: Core Setup]
+    A -/-> C[Phase 2: ROS2 Integration]
+    A -/-> D[Phase 3: Isaac Integration]
+    A -/-> E[Phase 4: VLA Integration]
+    A -/-> F[Phase 5: System Testing]
+    A -/-> G[Phase 6: Optimization]
 
-    B --> B1[Environment Setup]
-    B --> B2[Docker Configuration]
-    B --> B3[Dependency Management]
+    B -/-> B1[Environment Setup]
+    B -/-> B2[Docker Configuration]
+    B -/-> B3[Dependency Management]
 
-    C --> C1[ROS2 Core Nodes]
-    C --> C2[Navigation Stack]
-    C --> C3[Perception Nodes]
+    C -/-> C1[ROS2 Core Nodes]
+    C -/-> C2[Navigation Stack]
+    C -/-> C3[Perception Nodes]
 
-    D --> D1[Isaac Perception]
-    D --> D2[Isaac Mapping]
-    D --> D3[Isaac Control]
+    D -/-> D1[Isaac Perception]
+    D -/-> D2[Isaac Mapping]
+    D -/-> D3[Isaac Control]
 
-    E --> E1[VLA Vision Processing]
-    E --> E2[VLA Language Understanding]
-    E --> E3[VLA Action Planning]
+    E -/-> E1[VLA Vision Processing]
+    E -/-> E2[VLA Language Understanding]
+    E -/-> E3[VLA Action Planning]
 
-    F --> F1[Unit Testing]
-    F --> F2[Integration Testing]
-    F --> F3[System Validation]
+    F -/-> F1[Unit Testing]
+    F -/-> F2[Integration Testing]
+    F -/-> F3[System Validation]
 
-    G --> G1[Performance Tuning]
-    G --> G2[Resource Optimization]
-    G --> G3[Scalability Testing]
+    G -/-> G1[Performance Tuning]
+    G -/-> G2[Resource Optimization]
+    G -/-> G3[Scalability Testing]
 
-    B1 --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-```
+    B1 -/-> C
+    C /-/-> D
+    D -/-> E
+    E -/-> F
+    F -/-> G
+``` -->
 
 ## Practical Tutorials
 

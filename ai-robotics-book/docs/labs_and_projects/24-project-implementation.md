@@ -1,4 +1,4 @@
-# Chapter 24: Project Implementation - From Concept to Deployment
+# 24-Project Implementation - From Concept to Deployment
 
 ## Learning Objectives
 - Understand the complete lifecycle of robotics project implementation
@@ -31,26 +31,28 @@ Complex robotics systems require careful integration of multiple subsystems with
 
 ## Architecture/Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch24-ad.svg)
+
+<!-- ```mermaid
 graph TD
-    A[Project Conception] --> B[Requirements Analysis]
-    B --> C[Architecture Design]
-    C --> D[Component Development]
-    D --> E[System Integration]
-    E --> F[Testing & Validation]
-    F --> G[Deployment]
-    G --> H[Maintenance]
+    A[Project Conception] -/-> B[Requirements Analysis]
+    B -/-> C[Architecture Design]
+    C -/-> D[Component Development]
+    D -/-> E[System Integration]
+    E -/-> F[Testing & Validation]
+    F -/-> G[Deployment]
+    G -/-> H[Maintenance]
 
-    D --> I[Hardware Integration]
-    D --> J[Software Integration]
-    I --> E
-    J --> E
+    D -/-> I[Hardware Integration]
+    D -/-> J[Software Integration]
+    I -/-> E
+    J -/-> E
 
-    F --> K[Performance Validation]
-    F --> L[Safety Assessment]
-    K --> G
-    L --> G
-```
+    F -/-> K[Performance Validation]
+    F -/-> L[Safety Assessment]
+    K -/-> G
+    L --/> G
+``` -->
 
 ## Practical Tutorials
 

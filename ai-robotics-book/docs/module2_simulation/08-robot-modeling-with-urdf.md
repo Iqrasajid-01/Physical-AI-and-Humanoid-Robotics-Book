@@ -59,6 +59,9 @@ URDF models can include Gazebo-specific extensions:
 
 ## Architecture Diagram
 
+![Architecture Diagram](/img/ch8-ad.svg)
+
+<!-- 
 ```mermaid
 graph TB
     subgraph "URDF Robot Model"
@@ -83,31 +86,33 @@ graph TB
         M[Material]
     end
 
-    A --> B
-    B --> E
-    E --> C
-    C --> F
-    F --> D
-    B --> G
-    B --> H
-    B --> I
-    B --> J
-    C --> G
-    C --> H
-    C --> I
-    C --> J
-    D --> G
-    D --> H
-    D --> I
-    D --> J
-    B --> K
-    C --> L
-    D --> M
-```
+    A -/-> B
+    B -/-> E
+    E -/-> C
+    C -/-> F
+    F -/-> D
+    B -/-> G
+    B -/-> H
+    B -/-> I
+    B -/-> J
+    C -/-> G
+    C -/-> H
+    C -/-> I
+    C -/-> J
+    D -/-> G
+    D -/-> H
+    D -/-> I
+    D -/-> J
+    B -/-> K
+    C -/-> L
+    D -/-> M
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Architecture Diagram](/img/ch7-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant Model as URDF Model
     participant Parser as URDF Parser
@@ -119,7 +124,7 @@ sequenceDiagram
     Parser->>Vis: Create visual representation
     Sim->>Vis: Update positions during simulation
     Vis->>User: Display robot model
-```
+``` -->
 
 ## Code Example: Complete URDF Robot Model
 

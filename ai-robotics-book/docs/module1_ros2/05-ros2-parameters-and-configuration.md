@@ -61,13 +61,7 @@ YAML files provide a standardized way to store parameter configurations:
 
 ## Architecture Diagram
 
-<div style={{ textAlign: "center" }}>
-  <img
-    src="/img/ch5-flow.png"
-    alt="Architecture Diagram"
-    style={{ maxWidth: "800px", width: "80%" }}
-  />
-</div>
+![Architecture Diagram](/img/ch5-ad.svg)
 
 <!-- ```mermaid
 graph TB
@@ -102,13 +96,7 @@ graph TB
 
 ## Flow Diagram
 
-<div style={{ textAlign: "center" }}>
-  <img
-    src="/img/ch5-ad.svg"
-    alt="Flow Diagram"
-    style={{ maxWidth: "700px", width: "70%" }}
-  />
-</div>
+![Architecture Diagram](/img/ch5-flow.png)
 
 <!-- ```mermaid
 sequenceDiagram

@@ -54,7 +54,9 @@ Compared to traditional robotics approaches:
 
 ## Architecture Diagram
 
-```mermaid
+![Flow Diagram](/img/ch18-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Input Modalities"
         A[RGB Camera]
@@ -81,23 +83,25 @@ graph TB
         M[Self-Supervised Learning]
     end
 
-    A --> D
-    B --> D
-    C --> E
-    D --> F
-    E --> F
-    F --> G
-    G --> H
-    G --> I
-    G --> J
-    K --> F
-    L --> F
-    M --> F
-```
+    A -/-> D
+    B -/-> D
+    C -/-> E
+    D -/-> F
+    E -/-> F
+    F -/-> G
+    G -/-> H
+    G -/-> I
+    G -/-> J
+    K -/-> F
+    L -/-> F
+    M -/-> F
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch18-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant Human as Human User
     participant VLA as VLA Model
@@ -115,7 +119,7 @@ sequenceDiagram
     Env->>Robot: Environment feedback
     Robot->>VLA: Execution results
     VLA->>Human: Task completion status
-```
+``` -->
 
 ## Code Example: VLA Model Architecture
 

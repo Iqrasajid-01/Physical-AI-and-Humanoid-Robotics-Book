@@ -58,7 +58,9 @@ When integrating Isaac with ROS on Jetson:
 
 ## Architecture Diagram
 
-```mermaid
+![Flow Diagram](/img/ch15-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "ROS Ecosystem"
         A[Standard ROS Nodes]
@@ -89,33 +91,35 @@ graph TB
         Q[Memory System]
     end
 
-    A --> B
-    A --> C
-    A --> D
-    E --> B
-    F --> B
-    G --> B
-    H --> B
-    I --> B
-    E --> J
-    F --> J
-    G --> J
-    H --> K
-    I --> L
-    J --> O
-    K --> O
-    L --> O
-    M --> O
-    N --> O
-    N --> P
-    N --> Q
-    O --> Q
-    P --> Q
-```
+    A -/-> B
+    A -/-> C
+    A -/-> D
+    E -/-> B
+    F -/-> B
+    G -/-> B
+    H -/-> B
+    I -/-> B
+    E -/-> J
+    F -/-> J
+    G -/-> J
+    H -/-> K
+    I -/-> L
+    J -/-> O
+    K -/-> O
+    L -/-> O
+    M -/-> O
+    N -/-> O
+    N -/-> P
+    N -/-> Q
+    O -/-> Q
+    P -/-> Q
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch15-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant ROS as Standard ROS
     participant Isaac as Isaac ROS
@@ -127,7 +131,7 @@ sequenceDiagram
     GPU->>Isaac: Accelerated results
     Isaac->>App: Isaac-optimized output
     App->>ROS: Standard ROS interface
-```
+``` -->
 
 ## Code Example: Isaac ROS Integration Node
 

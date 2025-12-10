@@ -26,45 +26,47 @@ Testing system behavior under extreme conditions to identify failure points and 
 
 ## Architecture/Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch27-ad.svg)
+
+<!-- ```mermaid
 graph TD
-    A[System Assessment] --> B[Performance Testing]
-    A --> C[Safety Validation]
-    A --> D[Reliability Testing]
-    A --> E[Stress Testing]
-    A --> F[Acceptance Testing]
+    A[System Assessment] -/-> B[Performance Testing]
+    A -/-> C[Safety Validation]
+    A -/-> D[Reliability Testing]
+    A -/-> E[Stress Testing]
+    A -/-> F[Acceptance Testing]
 
-    B --> B1[Accuracy Metrics]
-    B --> B2[Response Time]
-    B --> B3[Resource Usage]
-    B --> B4[Throughput Analysis]
+    B -/-> B1[Accuracy Metrics]
+    B -/-> B2[Response Time]
+    B -/-> B3[Resource Usage]
+    B -/-> B4[Throughput Analysis]
 
-    C --> C1[Hazard Analysis]
-    C --> C2[Safety Protocols]
-    C --> C3[Emergency Procedures]
-    C --> C4[Risk Assessment]
+    C -/-> C1[Hazard Analysis]
+    C -/-> C2[Safety Protocols]
+    C -/-> C3[Emergency Procedures]
+    C -/-> C4[Risk Assessment]
 
-    D --> D1[Failure Rate]
-    D --> D2[Mean Time Between Failures]
-    D --> D3[System Availability]
-    D --> D4[Recovery Procedures]
+    D -/-> D1[Failure Rate]
+    D -/-> D2[Mean Time Between Failures]
+    D -//-> D3[System Availability]
+    D -/-> D4[Recovery Procedures]
 
-    E --> E1[Load Testing]
-    E --> E2[Stress Limits]
-    E --> E3[Bottleneck Analysis]
-    E --> E4[Degradation Patterns]
+    E -/-> E1[Load Testing]
+    E -/-> E2[Stress Limits]
+    E -/-> E3[Bottleneck Analysis]
+    E -/-> E4[Degradation Patterns]
 
-    F --> F1[Requirement Validation]
-    F --> F2[User Acceptance]
-    F --> F3[Scenario Testing]
-    F --> F4[Compliance Checking]
+    F -/-> F1[Requirement Validation]
+    F -/-> F2[User Acceptance]
+    F -/-> F3[Scenario Testing]
+    F -/-> F4[Compliance Checking]
 
-    B1 --> G[Performance Report]
-    C1 --> G
-    D1 --> G
-    E1 --> G
-    F1 --> G
-```
+    B1 -/-> G[Performance Report]
+    C1 -/-> G
+    D1 -/-> G
+    E1 -/-> G
+    F1 -/-> G
+``` -->
 
 ## Practical Tutorials
 

@@ -54,6 +54,8 @@ Laboratory exercises in robotics typically involve multiple subsystems including
 
 ## Architecture Diagram
 
+![Flow Diagram](/img/ch23-ad.svg)
+<!-- 
 ```mermaid
 graph TB
     subgraph "Lab Environment"
@@ -84,26 +86,28 @@ graph TB
         P[Documentation]
     end
 
-    A --> E
-    B --> E
-    C --> E
-    D --> E
-    E --> F
-    E --> G
-    E --> H
-    I --> E
-    J --> E
-    K --> A
-    L --> A
-    M --> A
-    N --> A
-    O --> N
-    P --> M
-```
+    A -/-> E
+    B -/-> E
+    C -/-> E
+    D -/-> E
+    E -/-> F
+    E -/-> G
+    E -/-> H
+    I -/-> E
+    J -/-> E
+    K -/-> A
+    L -/-> A
+    M -/-> A
+    N -/-> A
+    O -/-> N
+    P -/-> M
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch23-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant Student as Student
     participant Setup as Lab Setup
@@ -119,7 +123,7 @@ sequenceDiagram
     Analyze->>Report: Generate lab report
     Report->>Student: Review and learn
     Student->>Setup: Iterate with improvements
-```
+``` -->
 
 ## Code Example: Lab Exercise Framework
 

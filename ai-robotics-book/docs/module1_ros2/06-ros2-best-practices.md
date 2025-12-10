@@ -53,13 +53,7 @@ Following best practices is essential for creating production-ready robotic appl
 
 ## Architecture Diagram
 
-<div style={{ textAlign: "center" }}>
-  <img
-    src="/img/ch6-ad.png"
-    alt="Architecture Diagram"
-    style={{ maxWidth: "800px", width: "80%" }}
-  />
-</div>
+![Architecture Diagram](/img/ch6-ad.png)
 
 <!-- ```mermaid
 graph TB
@@ -102,14 +96,7 @@ graph TB
 
 ## Flow Diagram
 
-<div style={{ textAlign: "center" }}>
-  <img
-    src="/img/ch6-flow.svg"
-    alt="Flow Diagram"
-    style={{ maxWidth: "800px", width: "105%" }}
-  />
-</div>
-
+![Architecture Diagram](/img/ch6-flow.svg)
 
 <!-- ```mermaid
 sequenceDiagram

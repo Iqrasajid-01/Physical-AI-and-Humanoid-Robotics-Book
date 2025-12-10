@@ -54,7 +54,9 @@ VLA planning typically involves multiple levels:
 
 ## Architecture Diagram
 
-```mermaid
+![Flow Diagram](/img/ch19-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Input Modalities"
         A[Visual Input]
@@ -85,30 +87,32 @@ graph TB
         Q[Monitoring Actions]
     end
 
-    A --> E
-    B --> D
-    C --> G
-    D --> F
-    E --> F
-    F --> G
-    G --> J
-    G --> K
-    G --> L
-    G --> M
-    J --> H
-    K --> H
-    L --> H
-    M --> H
-    H --> I
-    I --> N
-    I --> O
-    I --> P
-    I --> Q
-```
+    A -/-> E
+    B -/-> D
+    C -/-> G
+    D -/-> F
+    E -/-> F
+    F -/-> G
+    G -/-> J
+    G -/-> K
+    G -/-> L
+    G -/-/> M
+    J -/-> H
+    K -/-> H
+    L -/-> H
+    M -//-> H
+    H -/-> I
+    I -/-> N
+    I -/-> O
+    I -/-> P
+    I -/-> Q
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch19-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant User as Human User
     participant Parser as Language Parser
@@ -130,7 +134,7 @@ sequenceDiagram
     Robot->>Planner: Execution status
     Planner->>Planner: Replanning if needed
     Robot->>User: Task completion
-```
+``` -->
 
 ## Code Example: VLA Planning Algorithm
 

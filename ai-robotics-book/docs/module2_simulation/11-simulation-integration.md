@@ -57,7 +57,9 @@ Combining multiple simulated sensors:
 
 ## Architecture Diagram
 
-```mermaid
+![Architecture Diagram](/img/ch11-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Real Robot"
         A[Physical Robot]
@@ -87,30 +89,32 @@ graph TB
         P[Performance Comparison]
     end
 
-    A --> B
-    A --> C
-    B --> D
-    C --> D
-    E --> F
-    E --> G
-    F --> H
-    G --> H
-    B --> I
-    F --> I
-    C --> K
-    G --> K
-    D --> J
-    H --> J
-    M --> N
-    N --> I
-    I --> O
-    O --> P
-    N --> P
-```
+    A -.-> B
+    A -.-> C
+    B -.-> D
+    C -.-> D
+    E -.-> F
+    E -.-> G
+    F -.-> H
+    G -.-> H
+    B -.-> I
+    F -.-> I
+    C -.-> K
+    G -.-> K
+    D -.-> J
+    H -.-> J
+    M -.-> N
+    N -.-> I
+    I -.-> O
+    O -.-> P
+    N -.-> P
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Architecture Diagram](/img/ch11-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant Dev as Developer
     participant Sim as Simulation
@@ -125,7 +129,7 @@ sequenceDiagram
     Valid->>Dev: Transfer gap analysis
     Dev->>Sim: Adjust simulation parameters
     Sim->>Real: Improved sim-to-real transfer
-```
+``` -->
 
 ## Code Example: Simulation-Reality Bridge Node
 

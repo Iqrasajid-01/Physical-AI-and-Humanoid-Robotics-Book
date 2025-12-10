@@ -53,7 +53,9 @@ Following best practices is essential for creating production-ready Isaac applic
 
 ## Architecture Diagram
 
-```mermaid
+![Flow Diagram](/img/ch17-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Isaac Best Practices Layer"
         A[GPU-First Design]
@@ -78,32 +80,34 @@ graph TB
         N[Debugging Tools]
     end
 
-    A --> G
-    A --> H
-    A --> I
-    B --> J
-    C --> J
-    D --> G
-    D --> H
-    D --> I
-    E --> G
-    E --> H
-    E --> I
-    F --> G
-    F --> H
-    F --> I
-    G --> J
-    H --> J
-    I --> J
-    K --> G
-    L --> J
-    M --> G
-    N --> G
-```
+    A -/-> G
+    A -/-> H
+    A -/-> I
+    B -/-> J
+    C -/-> J
+    D -/-> G
+    D -/-> H
+    D -/-> I
+    E -/-> G
+    E -/-> H
+    E -/-> I
+    F -/-> G
+    F -/-> H
+    F -/-> I
+    G -/-> J
+    H -/-> J
+    I -/-> J
+    K -/-> G
+    L -/-> J
+    M -/-> G
+    N -/-> G
+``` -->
 
 ## Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch17-flow.svg)
+
+<!-- ```mermaid
 sequenceDiagram
     participant Dev as Developer
     participant Design as System Design
@@ -119,7 +123,7 @@ sequenceDiagram
     Deploy->>Monitor: Monitor performance
     Monitor->>Dev: Provide feedback
     Dev->>Design: Refine based on feedback
-```
+``` -->
 
 ## Code Example: Isaac Best Practices Implementation
 

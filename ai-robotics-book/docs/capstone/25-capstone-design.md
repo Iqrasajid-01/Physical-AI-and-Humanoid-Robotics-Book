@@ -25,36 +25,38 @@ Implementing safety measures and reliability patterns across the entire integrat
 
 ## Architecture/Flow Diagram
 
-```mermaid
+![Flow Diagram](/img/ch25-ad.svg)
+
+<!-- ```mermaid
 graph TB
-    A[Capstone System] --> B[ROS2 Core]
-    A --> C[Isaac Perception]
-    A --> D[VLA Control]
-    A --> E[Simulation Layer]
+    A[Capstone System] -/-> B[ROS2 Core]
+    A -/-> C[Isaac Perception]
+    A -/-> D[VLA Control]
+    A -/-> E[Simulation Layer]
 
-    B --> B1[ROS2 Nodes]
-    B --> B2[ROS2 Services]
-    B --> B3[ROS2 Actions]
+    B -/-> B1[ROS2 Nodes]
+    B -/-> B2[ROS2 Services]
+    B /-/-> B3[ROS2 Actions]
 
-    C --> C1[Isaac Detection]
-    C --> C2[Isaac Tracking]
-    C --> C3[Isaac Mapping]
+    C -/-> C1[Isaac Detection]
+    C -/-> C2[Isaac Tracking]
+    C -/-> C3[Isaac Mapping]
 
-    D --> D1[Vision Processing]
-    D --> D2[Language Understanding]
-    D --> D3[Action Planning]
+    D -/-> D1[Vision Processing]
+    D -/-> D2[Language Understanding]
+    D -/-> D3[Action Planning]
 
-    E --> E1[Gazebo Sim]
-    E --> E2[Isaac Sim]
-    E --> E3[Hardware-in-Loop]
+    E -/-> E1[Gazebo Sim]
+    E -/-> E2[Isaac Sim]
+    E -/-> E3[Hardware-in-Loop]
 
-    B1 --> F[Hardware Interface]
-    C1 --> F
-    D1 --> F
-    E1 --> F
+    B1 -/-> F[Hardware Interface]
+    C1 -/-> F
+    D1 /-> F
+    E1 -/-> F
 
-    F --> G[Physical Robot]
-```
+    F -/-> G[Physical Robot]
+``` -->
 
 ## Practical Tutorials
 

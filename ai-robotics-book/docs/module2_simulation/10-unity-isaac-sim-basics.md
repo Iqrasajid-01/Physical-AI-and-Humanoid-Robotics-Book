@@ -50,7 +50,9 @@ Compared to Gazebo:
 
 ## Architecture Diagram
 
-```mermaid
+![Architecture Diagram](/img/ch10-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Isaac Sim Core"
         A[Unity Engine]
@@ -79,24 +81,27 @@ graph TB
         O[Development Tools]
     end
 
-    A --> B
-    A --> C
-    A --> D
-    D --> E
-    D --> F
-    D --> G
-    D --> H
-    E --> M
-    F --> I
-    F --> J
-    H --> N
-    I --> K
-    I --> L
-    O --> D
-```
+    A -/-> B
+    A -/-> C
+    A -/-> D
+    D -/-> E
+    D -/-> F
+    D -/-> G
+    D -/-> H
+    E -/-> M
+    F -/-> I
+    F -/-> J
+    H -/-> N
+    I -/-> K
+    I -/-> L
+    O -/-> D
+``` -->
 
 ## Flow Diagram
 
+![Architecture Diagram](/img/ch10-flow.svg)
+
+<!-- 
 ```mermaid
 sequenceDiagram
     participant Dev as Developer
@@ -113,7 +118,7 @@ sequenceDiagram
     Isaac->>AI: Generate synthetic data
     AI->>Dev: Trained perception models
     Dev->>Isaac: Deploy models to simulation
-```
+``` -->
 
 ## Code Example: Isaac Sim Robot Configuration
 

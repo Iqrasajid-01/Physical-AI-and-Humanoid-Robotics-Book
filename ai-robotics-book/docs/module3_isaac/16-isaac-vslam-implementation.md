@@ -57,7 +57,9 @@ For real-time Visual SLAM:
 
 ## Architecture Diagram
 
-```mermaid
+![Flow Diagram](/img/ch16-ad.svg)
+
+<!-- ```mermaid
 graph TB
     subgraph "Input Data"
         A[RGB Camera]
@@ -95,30 +97,30 @@ graph TB
         U[Control System]
     end
 
-    A --> E
-    B --> E
-    C --> G
-    D --> G
-    E --> K
-    F --> L
-    G --> M
-    H --> N
-    K --> F
-    L --> G
-    G --> H
-    H --> I
-    I --> J
-    O --> S
-    O --> T
-    P --> S
-    O --> U
-    E --> R
-    H --> Q
-```
+    A -/-> E
+    B -/-> E
+    C -/-> G
+    D -/-> G
+    E -/-> K
+    F -/-> L
+    G -/-> M
+    H -/-> N
+    K -/-> F
+    L -/-> G
+    G -/-> H
+    H -/-> I
+    I -/-> J
+    O -/-> S
+    O -/-> T
+    P -/-> S
+    O -/-> U
+    E -/-> R
+    H -/-> Q
+``` -->
 
-## Flow Diagram
+<!-- ## Flow Diagram -->
 
-```mermaid
+<!-- ```mermaid
 sequenceDiagram
     participant Camera as Camera Input
     participant Feature as Feature Detection
@@ -135,7 +137,7 @@ sequenceDiagram
     Map->>Opt: Map and pose data
     Opt->>Map: Optimized map
     Map->>Output: Final SLAM result
-```
+``` -->
 
 ## Code Example: Isaac Visual SLAM Node
 

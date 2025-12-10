@@ -69,19 +69,20 @@ const sidebars: SidebarsConfig = {
         'labs_and_projects/project-implementation',
       ],
     },
-    {
-      type: 'category',
-      label: 'Assessment',
-      items: [
-        'assessment/assessment-and-validation',
-      ],
-    },
+    
     {
       type: 'category',
       label: 'Capstone',
       items: [
         'capstone/capstone-design',
         'capstone/capstone-implementation',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Assessment',
+      items: [
+        'assessment/assessment-and-validation',
       ],
     },
     {
