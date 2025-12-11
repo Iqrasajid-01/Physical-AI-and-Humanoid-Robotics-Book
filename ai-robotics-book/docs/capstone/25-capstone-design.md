@@ -1,4 +1,4 @@
-# Chapter 25: Capstone Design - Integrating All Concepts
+# Capstone Design - Integrating All Concepts
 
 ## Learning Objectives
 - Design a comprehensive robotics system that integrates all concepts learned in previous modules
