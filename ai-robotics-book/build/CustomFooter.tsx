@@ -28,7 +28,7 @@
 // }
 
 import React from 'react';
-import styles from './styles.module.css';
+import styles from '/CustomFooter.module.css';
 import { FaGithub, FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 export default function Footer() {
