@@ -1,6 +1,7 @@
 ---
 title: Robotics Labs
 sidebar_label: 23 - Robotics Labs
+slug: /labs_and_projects/23-robotics-labs
 ---
 
 # Robotics Labs

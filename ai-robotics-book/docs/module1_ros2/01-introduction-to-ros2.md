@@ -1,6 +1,7 @@
 ---
 title: Introduction to ROS2
 sidebar_label: 01 - Introduction to ROS2
+slug: /module1_ros2/01-introduction-to-ros2
 ---
 
 # Introduction to ROS2

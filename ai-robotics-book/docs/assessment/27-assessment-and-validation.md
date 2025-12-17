@@ -1,4 +1,8 @@
-# Chapter 27: Assessment and Validation - Evaluating System Performance
+---
+slug: /assessment/27-assessment-and-validation
+---
+
+# 27: Assessment and Validation - Evaluating System Performance
 
 ## Learning Objectives
 - Evaluate the performance of the integrated robotics system

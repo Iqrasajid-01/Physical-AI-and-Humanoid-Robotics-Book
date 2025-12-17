@@ -5,7 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-
+// import styles from './table-of-contents.module.css';
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -20,7 +20,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/module1_ros2/introduction-to-ros2">
+            to="/table-of-contents">
             Start Reading 📖
           </Link>
         </div>

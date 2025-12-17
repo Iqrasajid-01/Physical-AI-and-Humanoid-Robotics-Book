@@ -1,6 +1,7 @@
 ---
 title: Introduction to NVIDIA Isaac
 sidebar_label: 12 - Introduction to NVIDIA Isaac
+slug: /module3_isaac/12-introduction-to-nvidia-isaac
 ---
 
 # Introduction to NVIDIA Isaac

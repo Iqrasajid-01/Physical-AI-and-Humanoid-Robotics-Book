@@ -24,6 +24,8 @@ const config: Config = {
   organizationName: 'Iqrasajid-01', // Usually your GitHub org/user name.
   projectName: 'Physical-AI-and-Humanoid-Robotics-Book', // Usually your repo name.
 
+  trailingSlash: false,
+  
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -103,7 +105,7 @@ const config: Config = {
           items: [
             {
               label: 'Introduction',
-              to: '/docs/module1_ros2/01-introduction-to-ros2',
+              to: '/table-of-contents.tsx',
             },
           ],
         },

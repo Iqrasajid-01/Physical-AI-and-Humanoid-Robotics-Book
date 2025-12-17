@@ -1,6 +1,7 @@
 ---
 title: ROS2 Nodes and Topics
 sidebar_label: 02 - ROS2 Nodes and Topics
+slug: /module2_simulation/07-introduction-to-gazebo-simulation
 ---
 
 # ROS2 Nodes and Topics

@@ -1,6 +1,7 @@
 ---
 title: Vision-Language-Action Models
 sidebar_label: 18 - Vision-Language-Action Models
+slug: /module4_vla/18-vision-language-action-models
 ---
 
 # Vision-Language-Action Models

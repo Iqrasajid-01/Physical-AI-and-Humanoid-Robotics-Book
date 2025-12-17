@@ -1,4 +1,8 @@
-# Chapter 28: Appendices - Additional Resources and References
+---
+slug: /appendices/28-appendices
+---
+
+# 28: Appendices - Additional Resources and References
 
 ## Appendix A: ROS2 Command Reference
 
