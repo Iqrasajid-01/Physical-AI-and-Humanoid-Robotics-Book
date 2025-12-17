@@ -1,0 +1,187 @@
+<<<<<<< HEAD
+/* Container & Heading */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.8);
+}
+
+/* Back Button */
+.backButton {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  color: #39ff14;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+.backButton:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #39ff14;
+}
+
+
+/* Cards Grid */
+.cardsWrapper {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Glass-style Card */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+  border: 2px solid rgba(57, 255, 20, 0.5);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border: 2px solid #39ff14; /* Neon mint green */
+  box-shadow: 0 0 20px #39ff14, 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Link / Title */
+.cardLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  font-size: 1.15rem;
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+/* Nested Cards */
+.nested {
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.nested .card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(57, 255, 20, 0.4);
+  font-size: 1rem;
+}
+
+.nested .card:hover {
+  border: 2px solid #39ff14;
+  box-shadow: 0 0 15px #39ff14, 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+=======
+/* Container & Heading */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.8);
+}
+
+/* Back Button */
+.backButton {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  color: #39ff14;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+.backButton:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #39ff14;
+}
+
+
+/* Cards Grid */
+.cardsWrapper {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Glass-style Card */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+  border: 2px solid rgba(57, 255, 20, 0.5);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border: 2px solid #39ff14; /* Neon mint green */
+  box-shadow: 0 0 20px #39ff14, 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Link / Title */
+.cardLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  font-size: 1.15rem;
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+/* Nested Cards */
+.nested {
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.nested .card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(57, 255, 20, 0.4);
+  font-size: 1rem;
+}
+
+.nested .card:hover {
+  border: 2px solid #39ff14;
+  box-shadow: 0 0 15px #39ff14, 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+>>>>>>> 8c6d10ec56bb3d36e488625ab843181aaa3fa81a
