@@ -105,7 +105,7 @@ const config: Config = {
           items: [
             {
               label: 'Introduction',
-              to: '/table-of-contents',
+              to: '/table-of-contents.tsx',
             },
           ],
         },
