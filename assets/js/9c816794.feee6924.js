@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkai_robotics_book=globalThis.webpackChunkai_robotics_book||[]).push([[9180],{8773:o=>{o.exports=JSON.parse('{"metadata":{"permalink":"/Physical-AI-and-Humanoid-Robotics-Book/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
