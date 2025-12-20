@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m uvicorn src.app:app --reload)",
+      "Bash(pip install -r requirements.txt)",
+      "Bash(pip install fastapi uvicorn[standard] cohere qdrant-client sqlalchemy asyncpg pydantic pydantic-settings python-dotenv tiktoken pytest pytest-asyncio pytest-cov httpx aiofiles python-multipart cryptography bandit black isort flake8 mypy types-requests slowapi)",
+      "Bash(pip install -e .)",
+      "Bash(set PYTHONPATH=%PYTHONPATH%)",
+      "Bash(.)",
+      "Bash(python -c \"import slowapi; print(''slowapi imported successfully'')\")",
+      "Bash(python -c \"from src import app; print(''app imported successfully'')\")",
+      "Bash(pip install psycopg2-binary)",
+      "Bash(python -m uvicorn src.app:app --host 0.0.0.0 --port 8000 --reload)"
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Chatbot Widget Demo</title>
+    <link rel="stylesheet" href="chat-widget.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .book-content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .section {
+            margin: 30px 0;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .highlight {
+            background-color: yellow;
+            padding: 2px 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>RAG Chatbot Widget Demo</h1>
+
+    <p>This page demonstrates the embeddable RAG Chatbot widget. The widget allows you to ask questions about the book content.</p>
+
+    <div class="book-content">
+        <h2>Sample Book Content</h2>
+        <div class="section">
+            <h3>Chapter 1: Introduction to Machine Learning</h3>
+            <p>Machine learning is a method of data analysis that automates analytical model building. It is a branch of artificial intelligence based on the idea that systems can learn from data, identify patterns and make decisions with minimal human intervention.</p>
+            <p>Traditional programming involves writing explicit instructions for a computer to follow. In contrast, machine learning algorithms build a model based on sample data, known as training data, in order to make predictions or decisions without being explicitly programmed to do so.</p>
+        </div>
+
+        <div class="section">
+            <h3>Chapter 2: Types of Machine Learning</h3>
+            <p>There are three main types of machine learning: supervised learning, unsupervised learning, and reinforcement learning. Supervised learning uses labeled training data, while unsupervised learning finds patterns in unlabeled data. Reinforcement learning uses rewards and punishments to learn optimal behaviors.</p>
+            <p>Supervised learning is like learning with a teacher. The algorithm is trained on input data that has been labeled with the correct output. Common supervised learning tasks include classification and regression.</p>
+        </div>
+
+        <div class="section">
+            <h3>Chapter 3: Applications of Machine Learning</h3>
+            <p>Machine learning is used in a wide variety of applications. Some common examples include email filtering, computer vision, speech recognition, and recommendation systems. In healthcare, machine learning is used for medical diagnosis and drug discovery.</p>
+            <p>Recommendation systems are particularly prevalent in e-commerce and streaming platforms. These systems analyze user behavior and preferences to suggest relevant products or content. The effectiveness of these systems directly impacts user engagement and revenue.</p>
+        </div>
+    </div>
+
+    <p>Select some text above and then click the chat icon in the bottom right to ask questions about the selected text, or just ask general questions about the book content.</p>
+
+    <script src="chat-widget.js"></script>
+    <script>
+        // Initialize the widget
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatWidget = new RagChatWidget({
+                apiUrl: 'http://localhost:8000', // Replace with your API URL
+                bookId: '123e4567-e89b-12d3-a456-426614174000' // Replace with actual book ID
+            });
+            chatWidget.init();
+        });
+    </script>
+</body>
+</html>

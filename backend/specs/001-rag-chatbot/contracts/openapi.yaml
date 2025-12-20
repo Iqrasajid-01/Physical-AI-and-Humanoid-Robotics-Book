@@ -1,0 +1,428 @@
+openapi: 3.0.3
+info:
+  title: RAG Chatbot API for Digital Books
+  description: API for a Retrieval-Augmented Generation chatbot that allows users to ask questions about digital book content
+  version: 1.0.0
+  contact:
+    name: RAG Chatbot Support
+    email: support@example.com
+
+servers:
+  - url: http://localhost:8000
+    description: Development server
+  - url: https://api.rag-chatbot.example.com
+    description: Production server
+
+paths:
+  /health:
+    get:
+      summary: Health check endpoint
+      description: Returns the health status of the API
+      responses:
+        '200':
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "healthy"
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: "2025-12-17T10:30:00Z"
+
+  /api/v1/books/:
+    get:
+      summary: List all ingested books
+      description: Returns a list of all books that have been ingested into the system
+      responses:
+        '200':
+          description: List of books
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  books:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/BookContent'
+        '500':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /api/v1/books/ingest:
+    post:
+      summary: Ingest a book for RAG
+      description: Processes and stores book content for retrieval-augmented generation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - title
+                - author
+                - content
+              properties:
+                title:
+                  type: string
+                  description: Title of the book
+                  example: "Introduction to Machine Learning"
+                author:
+                  type: string
+                  description: Author of the book
+                  example: "John Doe"
+                content:
+                  type: string
+                  description: Full text content of the book
+                  example: "Chapter 1: Introduction to the concepts..."
+                language:
+                  type: string
+                  description: Language of the book content
+                  default: "en"
+                  example: "en"
+                isbn:
+                  type: string
+                  description: ISBN of the book (optional)
+                  example: "978-0-123456-78-9"
+      responses:
+        '201':
+          description: Book successfully ingested
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  book_id:
+                    type: string
+                    format: uuid
+                    example: "123e4567-e89b-12d3-a456-426614174000"
+                  title:
+                    type: string
+                    example: "Introduction to Machine Learning"
+                  chunk_count:
+                    type: integer
+                    example: 45
+                  processing_time_ms:
+                    type: integer
+                    example: 2450
+        '400':
+          $ref: '#/components/responses/BadRequestResponse'
+        '500':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /api/v1/query/full-book:
+    post:
+      summary: Query the full book content
+      description: Ask a question about the full book content and get a response with citations
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - book_id
+                - query
+              properties:
+                book_id:
+                  type: string
+                  format: uuid
+                  description: ID of the book to query
+                  example: "123e4567-e89b-12d3-a456-426614174000"
+                query:
+                  type: string
+                  description: The question to ask about the book
+                  example: "What are the main concepts discussed in this book?"
+                top_k:
+                  type: integer
+                  description: Number of chunks to retrieve (default: 7)
+                  default: 7
+                  minimum: 1
+                  maximum: 20
+                enable_rerank:
+                  type: boolean
+                  description: Whether to use Cohere rerank (if available)
+                  default: true
+      responses:
+        '200':
+          description: Query response with citations
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '400':
+          $ref: '#/components/responses/BadRequestResponse'
+        '404':
+          $ref: '#/components/responses/NotFoundResponse'
+        '500':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /api/v1/query/selected-text:
+    post:
+      summary: Query selected text only
+      description: Ask a question about user-provided text, with complete isolation from book content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - selected_text
+                - query
+              properties:
+                selected_text:
+                  type: string
+                  description: Text selected/highlighted by the user
+                  example: "The concept of machine learning involves training algorithms..."
+                query:
+                  type: string
+                  description: The question about the selected text
+                  example: "Can you explain this concept in more detail?"
+                temp_collection_ttl_seconds:
+                  type: integer
+                  description: Time-to-live for temporary collection (default: 300)
+                  default: 300
+                  minimum: 60
+                  maximum: 3600
+      responses:
+        '200':
+          description: Query response based only on selected text
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '400':
+          $ref: '#/components/responses/BadRequestResponse'
+        '500':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /api/v1/chat:
+    post:
+      summary: General chat endpoint
+      description: Unified endpoint supporting both full-book and selected-text modes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - query
+              properties:
+                query:
+                  type: string
+                  description: The question to ask
+                  example: "What is the main theme of this book?"
+                book_id:
+                  type: string
+                  format: uuid
+                  description: ID of the book to query (required for full-book mode)
+                  example: "123e4567-e89b-12d3-a456-426614174000"
+                selected_text:
+                  type: string
+                  description: Text selected by user (required for selected-text mode)
+                  example: "The main theme is about..."
+                query_mode:
+                  type: string
+                  enum: [full_book, selected_text]
+                  description: Query mode to use
+                  default: "full_book"
+                session_id:
+                  type: string
+                  format: uuid
+                  description: Session ID for conversation continuity (optional)
+                  example: "123e4567-e89b-12d3-a456-426614174001"
+      responses:
+        '200':
+          description: Chat response with context
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '400':
+          $ref: '#/components/responses/BadRequestResponse'
+        '404':
+          $ref: '#/components/responses/NotFoundResponse'
+        '500':
+          $ref: '#/components/responses/ErrorResponse'
+
+components:
+  schemas:
+    BookContent:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "123e4567-e89b-12d3-a456-426614174000"
+        title:
+          type: string
+          example: "Introduction to Machine Learning"
+        author:
+          type: string
+          example: "John Doe"
+        isbn:
+          type: string
+          example: "978-0-123456-78-9"
+        total_pages:
+          type: integer
+          example: 350
+        language:
+          type: string
+          example: "en"
+        created_at:
+          type: string
+          format: date-time
+          example: "2025-12-17T10:30:00Z"
+        updated_at:
+          type: string
+          format: date-time
+          example: "2025-12-17T10:30:00Z"
+        chunk_count:
+          type: integer
+          example: 45
+
+    Question:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "123e4567-e89b-12d3-a456-426614174002"
+        session_id:
+          type: string
+          format: uuid
+          example: "123e4567-e89b-12d3-a456-426614174001"
+        query_text:
+          type: string
+          example: "What are the main concepts discussed in this book?"
+        query_mode:
+          type: string
+          enum: [full_book, selected_text]
+          example: "full_book"
+        selected_text:
+          type: string
+          example: "The concept of machine learning involves training algorithms..."
+        created_at:
+          type: string
+          format: date-time
+          example: "2025-12-17T10:30:00Z"
+
+    Citation:
+      type: object
+      properties:
+        page_numbers:
+          type: array
+          items:
+            type: integer
+          example: [45, 46]
+        chapter_titles:
+          type: array
+          items:
+            type: string
+          example: ["Chapter 3: Algorithms", "Chapter 4: Training"]
+        section_names:
+          type: array
+          items:
+            type: string
+          example: ["3.2 Supervised Learning", "4.1 Training Process"]
+        snippet:
+          type: string
+          example: "The concept of machine learning involves training algorithms..."
+        relevance_score:
+          type: number
+          format: float
+          minimum: 0.0
+          maximum: 1.0
+          example: 0.85
+
+    Response:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "123e4567-e89b-12d3-a456-426614174003"
+        question_id:
+          type: string
+          format: uuid
+          example: "123e4567-e89b-12d3-a456-426614174002"
+        response_text:
+          type: string
+          example: "The main concepts discussed in the book include machine learning algorithms, training processes, and evaluation metrics..."
+        confidence_score:
+          type: number
+          format: float
+          minimum: 0.0
+          maximum: 1.0
+          example: 0.92
+        citations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Citation'
+        retrieved_chunks_ids:
+          type: array
+          items:
+            type: string
+            format: uuid
+          example: ["123e4567-e89b-12d3-a456-426614174004", "123e4567-e89b-12d3-a456-426614174005"]
+        processing_time_ms:
+          type: integer
+          example: 1250
+        generated_at:
+          type: string
+          format: date-time
+          example: "2025-12-17T10:30:05Z"
+        has_fallback_response:
+          type: boolean
+          example: false
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "An error occurred processing your request"
+        error_code:
+          type: string
+          example: "INTERNAL_ERROR"
+        timestamp:
+          type: string
+          format: date-time
+          example: "2025-12-17T10:30:00Z"
+
+  responses:
+    BadRequestResponse:
+      description: Bad request - invalid input parameters
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    NotFoundResponse:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    ErrorResponse:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: API key for authentication
+
+security:
+  - ApiKeyAuth: []
